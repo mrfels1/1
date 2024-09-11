@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  php:
+    build: /php
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - mysql-data:/var/lib/mysql
